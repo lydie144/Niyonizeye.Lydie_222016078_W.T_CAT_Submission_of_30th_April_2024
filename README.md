@@ -4,6 +4,15 @@
 
 Welcome to the Organizing Music Festival System! This system is designed to help you efficiently manage all aspects of organizing a music festival, from artist bookings to ticket sales.
 
+
+# DATABASE CONNECTION CREDENTIALS:
+
+SERVER: 'localhost'
+USERNAME: 'Niyo'
+PASSWORD: '222016078'
+DATABASE: 'organizing_music_festival'
+
+
 ## Overview
 
 The Organizing Music Festival System provides the following features:
