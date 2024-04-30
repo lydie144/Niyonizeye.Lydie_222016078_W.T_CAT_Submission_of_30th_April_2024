@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Organizing Music Festival</title>
+    <style>
+        /* Add your custom styles here */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-image: url('image/My festival.jpg'); /* Replace 'MyFestivalImage.jpg' with your image filename */
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            color: ghostwhite; /* Set text color to white for better readability */
+        }
+
+        .navbar {
+            overflow: hidden;
+            background-color: #333;
+            display: flex;
+            justify-content: space-between; /* Align elements evenly in the navbar */
+        }
+
+        .navbar a {
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            padding: 14px 20px;
+            float: left;
+        }
+
+        .dropdown {
+            overflow: hidden;
+        }
+
+        .dropdown .dropbtn {
+            font-size: 16px;
+            border: none;
+            outline: none;
+            color: white;
+            padding: 14px 20px;
+            background-color: inherit;
+            font-family: inherit;
+            margin: 0;
+        }
+
+        .navbar a:hover, .dropdown:hover .dropbtn {
+            background-color: #ddd;
+            color: black;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            float: none;
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #ddd;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .navbar h1 {
+            margin: 0;
+            padding: 14px 20px;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="navbar">
+        <h1>ORGANIZING MUSIC FESTIVAL</h1>
+        <a href="#home">Home</a>
+        <a href="about us.html">About Us</a>
+        <a href="contact us.html">Contact Us</a>
+        <div class="dropdown">
+            <button class="dropbtn">Options
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="artist.html">Sign up</a>
+                <a href="signin_artist_form.html">Sign in</a>
+                <a href="signout.php">Sign out</a>
+            </div>
+        </div>
+    </div>
+
+    <div style="padding: 20px;">
+        <!-- Add your content here -->
+        <p></p>
+    </div>
+
+    <div class="container">
+        <h1>Welcome to Organizing Music Festival</h1>
+        <p>Organizing Music Festival is your ultimate destination for all things related to music festivals. Whether you're an event organizer, an artist, or a music enthusiast, our platform offers a comprehensive solution for planning, promoting, and enjoying music festivals.</p>
+        <p>Our website provides the following benefits:</p>
+        <ul>
+            <li>Efficient event planning tools to help organizers manage every aspect of their music festivals, from scheduling performances to coordinating logistics.</li>
+            <li>A platform for artists to showcase their talent, connect with fans, and secure opportunities to perform at upcoming festivals.</li>
+            <li>An interactive community for music lovers to discover new festivals, share experiences, and stay updated on the latest industry news and trends.</li>
+            <li>Access to resources, guides, and tips to enhance the festival experience for both attendees and organizers.</li>
+        </ul>
+        <p>Ready to dive into the world of music festivals? Join us now and be part of the excitement!</p>
+    </div>
+
+</body>
+</html>

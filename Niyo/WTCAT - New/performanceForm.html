@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Performance Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('image/My festival.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            color: white;
+        }
+
+        form {
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px auto;
+            max-width: 400px;
+        }
+
+        form label {
+            color: white;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        form input[type="text"],
+        form input[type="number"],
+        form input[type="email"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        form input[type="submit"],
+        form input[type="button"] {
+            background-color: #333;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        form input[type="submit"]:hover,
+        form input[type="button"]:hover {
+            background-color: #555;
+        }
+
+        h2 {
+            text-align: center;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <h2>Performance Form</h2>
+    <form action="submit_performance.php" method="post">
+        <label for="performanceID">PerformanceID:</label>
+        <input type="text" id="performanceID" name="performanceID" required><br><br>
+        
+        <label for="festivalID">FestivalID:</label>
+        <input type="text" id="festivalID" name="festivalID" required><br><br>
+        
+        <label for="artistID">ArtistID:</label>
+        <input type="number" id="artistID" name="artistID" required><br><br>
+        
+        <label for="performanceDate">PerformanceDate:</label>
+        <input type="date" id="performanceDate" name="performanceDate" required><br><br>
+        
+        <label for="startTime">StartTime:</label>
+        <input type="time" id="startTimen" name="startTime" required><br><br>
+
+        <label for="duration">Duration:</label>
+        <input type="number" id="duration" name="duration" required><br><br>
+        
+        <input type="submit" value="Submit">
+        <input type="button" value="Clear" onclick="clearForm()">
+    </form>
+    <h2>Update Performance</h2>
+    <form action="update_performance.php" method="post">
+        <label for="performance_id_update">Performance ID:</label>
+        <input type="number" id="performance_id_update" name="performance_id_update" required><br><br>
+        
+        <label for="artistID_update">ArtistID:</label>
+        <input type="number" id="artistID_update" name="artistID_update" placeholder="Enter new artistID"><br><br>
+        
+        <label for="performanceDate_update">PerformanceDate:</label>
+        <input type="date" id="performanceDate_update" name="performanceDate_update" placeholder="Enter new performanceDate"><br><br>
+        
+        <label for="startTime_update">startTime:</label>
+        <input type="time" id="startTime_update" name="startTime_update" placeholder="Enter new startTime"><br><br>
+        
+        <input type="submit" value="Update">
+        <input type="button" value="Clear" onclick="clearForm()">
+    </form>
+
+    <script>
+        function clearForm() {
+            document.getElementById("performance_id_update").value = "";
+            document.getElementById("artistID_update").value = "";
+            document.getElementById("performanceDate_update").value = "";
+            document.getElementById("startTime_update").value = "";
+        }
+    </script>
+
+    <h2 style="text-align: center;">Delete Performance</h2>
+    <form action="delete_performance.php" method="post">
+        <label for="performance_id_delete">Performance ID:</label>
+        <input type="number" id="performance_id_delete" name="performance_id_delete" required><br><br>
+        
+        <input type="submit" value="Delete">
+    </form>
+
+    <script>
+        function clearForm() {
+            document.getElementById("performance_id").value = "";
+            document.getElementById("festivalID").value = "";
+            document.getElementById("artistID").value = "";
+            document.getElementById("performanceDate").value = "";
+            document.getElementById("startTime ").value = "";
+            document.getElementById("duration").value = "";
+        }
+    </script>
+</body>
+</html>

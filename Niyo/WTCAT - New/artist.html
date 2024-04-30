@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artist Sign Up</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('image/My festival.jpg'); /* Replace 'image/My festival.jpg' with your actual image path */
+            background-size: cover;
+            background-repeat: no-repeat;
+            color: white;
+        }
+        
+        header {
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        nav {
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 10px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        nav ul li a:hover {
+            color: yellow;
+        }
+
+        main {
+            padding: 20px;
+            margin: 0 auto;
+            max-width: 600px;
+        }
+
+        form label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        form input[type="text"],
+        form input[type="email"],
+        form input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        form input[type="submit"],
+        form input[type="reset"] {
+            background-color: #333;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            margin-right: 10px;
+        }
+
+        form input[type="submit"]:hover,
+        form input[type="reset"]:hover {
+            background-color: #555;
+        }
+
+        .signin-link {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .signin-link a {
+            color: white;
+            text-decoration: underline;
+        }
+
+        .signin-link a:hover {
+            color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <?php include 'navbar.html'; ?>
+
+    <header>
+        <h1>Artist Sign Up</h1>
+    </header>
+
+    <main>
+        <form action="add_artist.php" method="post">
+            <!-- Removed Username and Password fields -->
+            
+            <label for="stageName">Stage Name:</label><br>
+            <input type="text" id="stageName" name="stageName" required><br>
+            
+            <label for="genre">Genre:</label><br>
+            <input type="text" id="genre" name="genre" required><br>
+            
+            <label for="platform">Platform:</label><br>
+            <input type="text" id="platform" name="platform" required><br>
+            
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" required><br><br>
+            
+            <input type="submit" value="Submit">
+            <input type="reset" value="Clear">
+        </form>
+        <div class="signin-link">
+            <p>Already have an account? <a href="signin_artist_form.html">Sign in</a></p>
+        </div>
+    </main>
+</body>
+</html>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Festival Form</title>
+    <style>
+         body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('image/My festival.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            color: white;
+        }
+
+        form {
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px auto;
+            max-width: 400px;
+        }
+
+        form label {
+            color: white;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        form input[type="text"],
+        form input[type="number"],
+        form input[type="email"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        form input[type="submit"],
+        form input[type="button"] {
+            background-color: #333;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        form input[type="submit"]:hover,
+        form input[type="button"]:hover {
+            background-color: #555;
+        }
+
+        h2 {
+            text-align: center;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <h2>Add Festival</h2>
+    <form action="submit_festival.php" method="post">
+
+        <label for="festivalID">FestivalID:</label>
+        <input type="number" id="festivalID" name="festivalID" required>
+
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        
+        <label for="start_date">Start Date:</label>
+        <input type="date" id="start_date" name="start_date" required>
+        
+        <label for="end_date">End Date:</label>
+        <input type="date" id="end_date" name="end_date" required>
+        
+        <label for="organizer_id">Organizer ID:</label>
+        <input type="number" id="organizer_id" name="organizer_id" required>
+        
+        <label for="ticket_price">Ticket Price:</label>
+        <input type="number" id="ticket_price" name="ticket_price" required>
+        
+        <input type="submit" value="submit">
+        <input type="reset" value="Clear ">
+    </form>
+
+    <h2>Update Festival</h2>
+<form action="update_festival.php" method="post">
+    <label for="festivalID">FestivalID:</label>
+    <input type="number" id="festivalID" name="festivalID" required><br><br>
+    
+    <label for="name_update"> Name:</label>
+    <input type="text" id="name_update" name="name_update">
+    
+    <label for="start_date_update"> Start Date:</label>
+    <input type="date" id="start_date_update" name="start_date_update">
+    
+    <label for="organizer_id_update"> Organizer ID:</label>
+    <input type="number" id="organizer_id_update" name="organizer_id_update">
+    
+    <label for="ticket_price_update"> Ticket Price:</label>
+    <input type="number" id="ticket_price_update" name="ticket_price_update">
+    
+    <input type="submit" value="Update ">
+    <input type="reset" value="Clear ">
+</form>
+
+
+    <h2>Delete Festival</h2>
+    <form action="delete_festival.php" method="post">
+        <label for="festival_id_delete">Festival ID:</label>
+        <input type="number" id="festival_id_delete" name="festival_id_delete" required>
+        
+        <input type="submit" value="Delete ">
+        <input type="reset" value="Clear ">
+    </form>
+</body>
+</html>

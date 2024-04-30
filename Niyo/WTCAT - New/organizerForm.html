@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Organizer Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('image/My festival.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            color: white;
+        }
+
+        form {
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px auto;
+            max-width: 400px;
+        }
+
+        form label {
+            color: white;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        form input[type="text"],
+        form input[type="number"],
+        form input[type="email"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        form input[type="submit"],
+        form input[type="button"] {
+            background-color: #333;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        form input[type="submit"]:hover,
+        form input[type="button"]:hover {
+            background-color: #555;
+        }
+
+        h2 {
+            text-align: center;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <h2>Organizer Form</h2>
+    <form action="submit_organizer.php" method="post">
+
+        <label for="organizerID">organizerID:</label>
+        <input type="text" id="organizerID" name="organizerID" required><br><br>
+
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br><br>
+        
+        <label for="phone">Phone:</label>
+        <input type="text" id="phone" name="phone" required><br><br>
+        
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br><br>
+        
+        <label for="title">Title:</label>
+        <input type="text" id="title" name="title" required><br><br>
+        
+        <label for="location">Location:</label>
+        <input type="text" id="location" name="location" required><br><br>
+        
+        <input type="submit" value="Submit">
+        <input type="button" value="Clear" onclick="clearForm()">
+    </form>
+    <h2>Update Organizer</h2>
+    <form action="update_organizer.php" method="post">
+        <label for="organizer_id_update">Organizer ID:</label>
+        <input type="number" id="organizer_id_update" name="organizer_id_update" required><br><br>
+        
+        <label for="name_update">Name:</label>
+        <input type="text" id="name_update" name="name_update" placeholder="Enter new name"><br><br>
+        
+        <label for="title_update">Title:</label>
+        <input type="text" id="title_update" name="title_update" placeholder="Enter new title"><br><br>
+        
+        <label for="location_update">Location:</label>
+        <input type="text" id="location_update" name="location_update" placeholder="Enter new location"><br><br>
+        
+        <input type="submit" value="Update">
+        <input type="button" value="Clear" onclick="clearForm()">
+    </form>
+
+    <script>
+        function clearForm() {
+            document.getElementById("organizer_id_update").value = "";
+            document.getElementById("name_update").value = "";
+            document.getElementById("title_update").value = "";
+            document.getElementById("location_update").value = "";
+        }
+    </script>
+
+    <h2 style="text-align: center;">Delete organizer</h2>
+    <form action="delete_organizer.php" method="post">
+        <label for="organizer_id_delete">Organizer ID:</label>
+        <input type="number" id="organizer_id_delete" name="organizer_id_delete" required>
+
+        
+        <input type="submit" value="Delete">
+    </form>
+
+    <script>
+        function clearForm() {
+            document.getElementById("name").value = "";
+            document.getElementById("phone").value = "";
+            document.getElementById("email").value = "";
+            document.getElementById("title").value = "";
+            document.getElementById("location").value = "";
+        }
+    </script>
+</body>
+</html>

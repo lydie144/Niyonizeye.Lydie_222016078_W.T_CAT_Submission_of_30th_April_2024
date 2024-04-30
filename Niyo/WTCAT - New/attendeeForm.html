@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attendee Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('image/My festival.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            color: white;
+        }
+
+        form {
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px auto;
+            max-width: 400px;
+        }
+
+        form label {
+            color: white;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        form input[type="text"],
+        form input[type="number"],
+        form input[type="email"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        form input[type="submit"],
+        form input[type="button"] {
+            background-color: #333;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        form input[type="submit"]:hover,
+        form input[type="button"]:hover {
+            background-color: #555;
+        }
+
+        h2 {
+            text-align: center;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <h2>Add Attendee</h2>
+    <form action="add_attendee.php" method="POST">
+        <label for="attendeeID">AttendeeID</label>
+        <input type="text" id="attendeeID" name="attendeeID" required>
+    
+        <label for="firstName">First Name</label>
+        <input type="text" id="firstName" name="firstName" required>
+    
+        <label for="lastName">Last Name</label>
+        <input type="text" id="lastName" name="lastName" required>
+    
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+    
+        <label for="phone">Phone</label>
+        <input type="tel" id="phone" name="phone" required>
+    
+        <input type="submit" value="Submit">
+        <input type="reset" value="Clear">
+    </form>
+    
+     <h2>Update Attendee</h2>
+        <form action="update_attendee.php" method="POST">
+            <label for="attendeeID">AttendeeID</label>
+            <input type="text" id="attendeeID" name="attendeeID" required>
+
+            <label for="firstName">New First Name</label>
+            <input type="text" id="firstName" name="firstName" required>
+
+            <label for="lastName">New Last Name</label>
+            <input type="text" id="lastName" name="lastName" required>
+
+             <input type="submit" value="Update">
+        <input type="reset" value="Clear">
+        </form>
+    <h2>Delete Attendee</h2>
+        <form action="delete_attendee.php" method="POST">
+            <label for="attendeeID">AttendeeID</label>
+            <input type="text" id="attendeeID" name="attendeeID" required>
+
+            <input type="submit" value="delete">
+        <input type="reset" value="Clear">
+        </form>
+    
+</body>
+</html>
